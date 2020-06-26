@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg  navbar-light bg-light ">
+  <a class="navbar-brand" routerLink="/index" routerLinkActive="active">
+    <img src="assets\prideLogo.png" alt="" height="90">
+  </a>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse navItemPad" [ngClass]="{ 'show': toggleEvent }">
+
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/index']" fragment="section2" routerLinkActive="active">About us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/index" routerLinkActive="active">Our Products</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/index" routerLinkActive="active">Plans for you</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/index" routerLinkActive="active">Contact us</a>
+      </li>
+    
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/order" routerLinkActive="active">Order Now</a>
+      </li>
+      
+    </ul>
+
+  </div>
+</nav>
