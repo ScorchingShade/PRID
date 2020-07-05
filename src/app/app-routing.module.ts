@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OrderComponentComponent } from './order-component/order-component.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { PaytmOrderPageComponent } from './paytm-order-page/paytm-order-page.component';
 
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'order', component: OrderComponentComponent },
+  { path: 'payment', component: PaytmOrderPageComponent },
   { path: 'index', component: LandingPageComponent },
    
 ];
