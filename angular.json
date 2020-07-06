@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PrideDairy"
+    }
+  },
+  "defaultProject": "PrideDairy",
+  "cli": {
+    "analytics": "e5d87a62-438b-4398-ad82-2a5636a00bf2"
+  }
 }

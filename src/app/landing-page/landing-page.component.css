@@ -1,0 +1,80 @@
+
+    h1 {color: white;
+     font-family:Inconsolata;
+     font-size: 500%;
+     Padding:3px;
+     border-bottom:30px;
+     }
+     
+     .fa_custom {  
+   
+     float: right;
+    margin-right:40px ;
+    margin-top: 10px;
+     font-size: 50px; 
+     }  
+    
+     #bottle{
+       width: 100%;
+       padding-left: 20px;
+       padding-top: 20px;
+       padding-bottom: 20px;
+       border-radius: 10%;
+     }
+     
+     #drinkbest{    
+       padding:20px;  
+       border-radius:8%; 
+     } 
+     
+        #innerdiv{
+            padding:5px;
+            padding-left: 0px;
+        }
+
+        #secondInnerdiv{
+            border-radius: 5%;
+            padding:10px;
+            
+        }    
+       
+                   hr{
+                    border-top: 2px solid #cfbb08;
+                    margin: 10px;
+                    
+                   }
+                   #header{color:#cfbb08 ;
+                   font-family:Inconsolata;
+                   font-size: 500%;
+                   }
+                   #body{
+                       font-size:large;
+                       font-family: Libre Baskerville;
+                       padding: 5px;
+                   }
+                  
+                  
+                 
+                   #top-left {
+         position: absolute;
+         padding: 20px;
+         color: white;
+         font-size: 400%;
+         font-family: Inconsolata;
+         
+       }
+   
+       .figure-caption{
+        font-size: 15px;
+        padding-top: 5px;
+        font-family: Libre Baskerville;
+       }
+       
+    .figure-caption{
+    font-size: 15px;
+    padding-top: 5px;
+   font-family: Libre Baskerville;
+   }
+     
+                 
+        
