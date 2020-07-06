@@ -1,0 +1,30 @@
+
+.carousel-indicators{
+  margin: auto;
+}
+
+img{
+  height: 75%;
+  width: 75%;
+}
+.caption{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'InconsoLibre Baskerville';
+}
+  .pledge{
+    text-align: center;
+    padding: 10px;
+    font-family: Inconsolata;
+  }
+  .bottom-text{
+    color: white;
+    font-family: Inconsolata;
+    font-size: xx-large;
+    padding: 10px;
+  }
+  .fa{
+    font-size:48px;
+    float: right;
+    padding: 10px;
+  }
