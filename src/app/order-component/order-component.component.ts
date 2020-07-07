@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderServiceService } from './order-service.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { PayDialogComponent } from './pay-dialog/pay-dialog.component';
 
 @Component({
   selector: 'app-order-component',
@@ -13,7 +15,7 @@ export class OrderComponentComponent implements OnInit {
 
   data:any;
 
-  constructor(private _order:OrderServiceService,private route: ActivatedRoute,private router: Router) { 
+  constructor(private _order:OrderServiceService,private route: ActivatedRoute,private router: Router,public dialog: MatDialog) { 
     
   }
 
@@ -31,9 +33,17 @@ export class OrderComponentComponent implements OnInit {
       this._order.sharedMessage=data;
       console.log("Shared message\n"+JSON.stringify(this._order.sharedMessage));
 
-      this.router.navigate(["/payment"])
+      // this.router.navigate(["/payment"])
+      const dialogRef = this.dialog.open(PayDialogComponent);
+      
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+      });
+      
 
     })
+
+   
   }
 
 }
