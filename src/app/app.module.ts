@@ -10,6 +10,7 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RouterModule } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     NavbarComponentComponent,
     OrderComponentComponent,
     FooterComponentComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
