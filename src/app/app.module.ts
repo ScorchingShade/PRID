@@ -10,6 +10,22 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RouterModule } from '@angular/router';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { FormsModule } from '@angular/forms'; 
+import { HttpClientModule } from '@angular/common/http';
+import { MatRadioModule, ShowOnDirtyErrorStateMatcher } from '@angular/material'
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatDialogModule} from '@angular/material/dialog';
+import { PayDialogComponent } from './order-component/pay-dialog/pay-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material';
+import { MatSnackBarModule } from '@angular/material';
+
+
 
 @NgModule({
   declarations: [
@@ -18,16 +34,31 @@ import { RouterModule } from '@angular/router';
     NavbarComponentComponent,
     OrderComponentComponent,
     FooterComponentComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    PayDialogComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule
-
+    RouterModule,
+    MDBBootstrapModule,
+    MDBBootstrapModule.forRoot(),
+    MatRadioModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatIconModule,
+    MatToolbarModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSnackBarModule    
+      
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
+  bootstrap: [AppComponent],
+  entryComponents: [PayDialogComponent],
 })
 export class AppModule { }

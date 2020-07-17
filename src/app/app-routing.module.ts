@@ -8,6 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'order', component: OrderComponentComponent },
+  // { path: 'payment', component: PayComponent },
   { path: 'index', component: LandingPageComponent },
    
 ];
