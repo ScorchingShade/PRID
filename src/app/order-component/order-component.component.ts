@@ -42,7 +42,7 @@ export class OrderComponentComponent implements OnInit {
 
   matcher = new NewErrorStateMatcher();
 
-  mobno:String;email:String;amount:String; currency:String;
+  mobno:String;email:String;amount:String; currency:String;name:String;
 
   data:any;
 
@@ -55,7 +55,7 @@ export class OrderComponentComponent implements OnInit {
 
   onOrder(){
 
-    this.data={mobno:this.mobno,email:this.email,amount:this.amount,currency:this.currency}
+    this.data={mobno:this.mobno,email:this.email,amount:this.amount,currency:this.currency,name:this.name}
     console.log("here is the data"+JSON.stringify(this.data))
 
     if(this.amount!=undefined && this.mobno!=undefined && this.email!=undefined){
