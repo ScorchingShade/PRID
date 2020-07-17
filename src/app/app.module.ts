@@ -24,8 +24,7 @@ import { ErrorStateMatcher } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material';
-
-
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +35,8 @@ import { MatSnackBarModule } from '@angular/material';
     FooterComponentComponent,
     LandingPageComponent,
     PayDialogComponent,
+    ProductsComponent
+
   ],
   imports: [
     HttpClientModule,
