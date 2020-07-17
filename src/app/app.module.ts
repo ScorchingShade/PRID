@@ -13,10 +13,18 @@ import { RouterModule } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms'; 
 import { HttpClientModule } from '@angular/common/http';
-import { PaytmOrderPageComponent } from './paytm-order-page/paytm-order-page.component';
-import { MatRadioModule } from '@angular/material'
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatRadioModule, ShowOnDirtyErrorStateMatcher } from '@angular/material'
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatDialogModule} from '@angular/material/dialog';
+import { PayDialogComponent } from './order-component/pay-dialog/pay-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material';
+import { MatSnackBarModule } from '@angular/material';
+
 
 
 @NgModule({
@@ -27,7 +35,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     OrderComponentComponent,
     FooterComponentComponent,
     LandingPageComponent,
-    PaytmOrderPageComponent
+    PayDialogComponent,
   ],
   imports: [
     HttpClientModule,
@@ -40,11 +48,17 @@ import {MatDialogModule} from '@angular/material/dialog';
     MDBBootstrapModule.forRoot(),
     MatRadioModule,
     MatFormFieldModule,
-    MatDialogModule
-    
-
+    MatDialogModule,
+    MatIconModule,
+    MatToolbarModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSnackBarModule    
+      
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
+  bootstrap: [AppComponent],
+  entryComponents: [PayDialogComponent],
 })
 export class AppModule { }

@@ -1,25 +1,89 @@
-<p>This is a test</p>
+<br>
+<br>
+<br>
+<div class="container card">
 
-<h1>Enter Details</h1>
-
-<label>Mobile Number</label>
-<input type ="text" class ="form-control" [(ngModel)] ="mobno">
-
-<label>Email ID</label>
-<input type ="text" class ="form-control" [(ngModel)] ="email">
-
-<label>Transaction Amount</label>
-<input type ="text" class ="form-control" [(ngModel)] ="amount">
-
-<label>currency</label>
-<input type ="text" class ="form-control" [(ngModel)] ="currency">
+    <h1>Order Now</h1>
 
 
-<button class="btn btn-info " (click)="onOrder()">order</button>
+    <form class="example-form">
+        <mat-form-field class="w-100">
+            <mat-label>Email</mat-label>
+            <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                placeholder="Ex. abc@example.com" [(ngModel)]="email">
+            <mat-hint>Please enter a valid email</mat-hint>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="w-100">
+            <mat-label>Name</mat-label>
+            <input matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher" [(ngModel)]="name">
+            <mat-hint>Please enter your name</mat-hint>
+            <mat-error *ngIf="!nameFormControl.hasError('required')">
+                Please enter your name!
+            </mat-error>
+            <mat-error *ngIf="nameFormControl.hasError('required')">
+                Name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="w-100">
+            <mat-label>Contact Number</mat-label>
+            <input matInput [formControl]="numberFormControl" [errorStateMatcher]="matcher" [(ngModel)]="mobno">
+            <mat-hint>Please enter your contact number</mat-hint>
+            <mat-error *ngIf="!numberFormControl.hasError('required')">
+                Please enter your contact number!
+            </mat-error>
+            <mat-error *ngIf="numberFormControl.hasError('required')">
+                Number is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="standard" class="w-100">
+            <mat-label>Product</mat-label>
+            <mat-select [formControl]="productFormControl" [errorStateMatcher]="matcher" [(ngModel)]="amount">
+                <mat-option value="1200" >Cow milk 1 litre/ 1 month trial</mat-option>
+                <mat-option value="3600">Cow milk 1 litre/ 3 month subscription</mat-option>
+                <mat-option value="7200">Cow milk 1 litre/ 6 month subscription</mat-option>
+                <mat-option value="1500">Buffalo milk 1 litre/ 1 month trial</mat-option>
+                <mat-option value="4500">Buffalo milk 1 litre/ 3 month subscription</mat-option>
+                <mat-option value="9000">Buffalo milk 1 litre/ 6 month subscription</mat-option>
+                <mat-option value="900">Curd milk 1/2 litre/ 1 month trial</mat-option>
+                <mat-option value="2700">Curd milk 1/2 litre/ 3 month subscription</mat-option>
+                <mat-option value="5400">Curd milk 1/2 litre/ 6 month subscription</mat-option>
+            </mat-select>
+            <mat-hint>Please choose the products to order</mat-hint>
+            <mat-error *ngIf="!productFormControl.hasError('required')">
+                Please choose the products!
+            </mat-error>
+            <mat-error *ngIf="productFormControl.hasError('required')">
+                This is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+        <br>
+        <br>
+        <br>
 
 
 
+        <button class="btn btn-primary w-100 " mat-button (click)="onOrder()">order</button>
+        <br>
+        <br>
+        
 
+    </form>
+  
+</div>
 
-
-
+<br>
+<br>
+<br>
