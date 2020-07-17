@@ -79,6 +79,7 @@ export class PayDialogComponent implements OnInit {
 
     this.dialogRef.close();
     
+    
   
   
   }
