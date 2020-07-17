@@ -78,14 +78,15 @@ export class PayDialogComponent implements OnInit {
     rzp1.open();
 
     this.dialogRef.close();
+
     
-    
-  
+
   
   }
   
   cancel(){
     this.dialogRef.close();
+    
   }
 
 }
