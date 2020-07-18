@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'products', component: ProductsComponent },
   { path: 'order', component: OrderComponentComponent },
+  // { path: 'payment', component: PayComponent },
   { path: 'index', component: LandingPageComponent },
    
 ];

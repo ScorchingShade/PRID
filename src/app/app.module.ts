@@ -12,6 +12,18 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RouterModule } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { FormsModule } from '@angular/forms'; 
+import { HttpClientModule } from '@angular/common/http';
+import { MatRadioModule } from '@angular/material'
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatDialogModule} from '@angular/material/dialog';
+import { PayDialogComponent } from './order-component/pay-dialog/pay-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,16 +32,29 @@ import { ProductsComponent } from './products/products.component';
     OrderComponentComponent,
     FooterComponentComponent,
     LandingPageComponent,
-    ProductsComponent
+    ProductsComponent,
+    PayDialogComponent
+
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule
+    RouterModule,
+    MDBBootstrapModule,
+    MDBBootstrapModule.forRoot(),
+    MatRadioModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatIconModule,
+    MatToolbarModule
+    
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PayDialogComponent],
 })
 export class AppModule { }
