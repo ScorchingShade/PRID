@@ -10,6 +10,7 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RouterModule } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms'; 
 import { HttpClientModule } from '@angular/common/http';
@@ -18,14 +19,12 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatDialogModule} from '@angular/material/dialog';
 import { PayDialogComponent } from './order-component/pay-dialog/pay-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material';
-
-
 
 @NgModule({
   declarations: [
@@ -35,7 +34,11 @@ import { MatSnackBarModule } from '@angular/material';
     OrderComponentComponent,
     FooterComponentComponent,
     LandingPageComponent,
+    ProductsComponent,
     PayDialogComponent,
+    PayDialogComponent,
+    ProductsComponent
+
   ],
   imports: [
     HttpClientModule,
