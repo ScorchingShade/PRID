@@ -25,6 +25,7 @@ import { ErrorStateMatcher } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material';
+import { ContactComponentComponent } from './contact-component/contact-component.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MatSnackBarModule } from '@angular/material';
     ProductsComponent,
     PayDialogComponent,
     PayDialogComponent,
-    ProductsComponent
+    ProductsComponent,
+    ContactComponentComponent
 
   ],
   imports: [
