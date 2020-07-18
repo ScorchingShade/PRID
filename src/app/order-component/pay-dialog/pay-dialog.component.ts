@@ -35,7 +35,7 @@ export class PayDialogComponent implements OnInit {
       "contact": "9999999999"
   },
     "theme": {
-        "color": "#8bf7a8"
+        "color": "#1392eb"
     },
     "handler": function (response){
       alert(response.razorpay_payment_id);
@@ -44,7 +44,6 @@ export class PayDialogComponent implements OnInit {
   },
 };
 
-  url:String="https://securegw-stage.paytm.in/theia/processTransaction";
   callback:String="http://localhost:8843/request";
 
 
@@ -56,6 +55,8 @@ export class PayDialogComponent implements OnInit {
 
   ngOnInit() {
     let remains=this._order.sharedMessage;
+    this.amount=this._order.sharedMessage.amount;
+    console.log("amount\n"+this.amount);
      console.log("data remaining --"+JSON.stringify(remains));
 
      this.JSONDATA = JSON.parse(JSON.stringify(remains));
@@ -66,7 +67,10 @@ export class PayDialogComponent implements OnInit {
 
    submit(){
     this.razorPayOptions.order_id=this.JSONDATA.order_id;
-    this.razorPayOptions.amount=this.JSONDATA.amount;
+    this.razorPayOptions.prefill.name=this._order.razorUiPredefinedData.name;
+    this.razorPayOptions.amount=this.JSONDATA.amount+'00';
+    this.razorPayOptions.prefill.email=this._order.razorUiPredefinedData.email;
+    this.razorPayOptions.prefill.contact=this._order.razorUiPredefinedData.mobno;
   
     console.log("razor Options "+this.razorPayOptions);
   
@@ -74,13 +78,15 @@ export class PayDialogComponent implements OnInit {
     rzp1.open();
 
     this.dialogRef.close();
+
     
-  
+
   
   }
   
   cancel(){
     this.dialogRef.close();
+    
   }
 
 }

@@ -23,6 +23,7 @@ export class OrderServiceService {
   constructor(private _http: HttpClient) { }
   
   sharedMessage:any;
+  razorUiPredefinedData:any;
 
   postData(data){
     console.log("postData  "+data)
