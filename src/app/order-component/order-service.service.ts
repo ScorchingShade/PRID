@@ -27,7 +27,7 @@ export class OrderServiceService {
 
   postData(data){
     console.log("postData  "+data)
-    return this._http.post("https://3.130.249.247:8843/pay/",data,this.httpOptions).pipe(map(result => result));
+    return this._http.post("http://aincworks.tech:8843/pay",data,this.httpOptions).pipe(map(result => result));
   }
 
 

@@ -5,3 +5,7 @@
 .linerWidth{
     margin-right: 5% ;
 }
+
+.navbar{
+    z-index: 100;
+}

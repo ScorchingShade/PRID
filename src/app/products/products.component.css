@@ -24,6 +24,10 @@ img{
     font-family: Inconsolata ;
     font-weight: bold;
 }
+
+.heading:hover{
+    transform: scale(1.2);
+}
 .text{
     font-size: 20px;
     font-family: Libre Baskerville ;
@@ -55,7 +59,4 @@ hr{
     box-shadow: 10px 10px 25px #777;
 }
 
-.lineanim:hover{
-    box-shadow: 10px 10px 25px #777;
-    transform: scale(1.1);
-}
+
