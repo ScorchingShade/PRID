@@ -36,13 +36,17 @@ export class OrderComponentComponent implements OnInit {
     Validators.required,
   ]);
 
+  addressFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+
   productFormControl = new FormControl('', [
     Validators.required,
   ]);
 
   matcher = new NewErrorStateMatcher();
 
-  mobno:String;email:String;amount:String; currency:String;name:String;
+  mobno:String;email:String;amount:String; currency:String;name:String;address:string;
 
   data:any;
 
@@ -55,7 +59,7 @@ export class OrderComponentComponent implements OnInit {
 
   onOrder(){
 
-    this.data={mobno:this.mobno,email:this.email,amount:this.amount,currency:this.currency,name:this.name}
+    this.data={mobno:this.mobno,email:this.email,amount:this.amount,currency:this.currency,name:this.name,address:this.address}
     console.log("here is the data"+JSON.stringify(this.data))
 
     if(this.amount!=undefined && this.mobno!=undefined && this.email!=undefined){

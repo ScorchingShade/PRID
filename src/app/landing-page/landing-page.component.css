@@ -81,7 +81,7 @@
    .caption{
      font-size: 40px;
      font-weight: bold;
-     font-family: 'InconsoLibre Baskerville';
+     font-family: 'Libre Baskerville';
    }
      .pledge{
        text-align: center;
@@ -272,3 +272,10 @@
  .cardbg{
    background: azure;
  }
+ 
+.card{
+  box-shadow: 10px 10px 25px #777;
+}
+
+.trans { transition: all .2s ease-in-out; }
+.trans:hover { transform: scale(1.1); }
