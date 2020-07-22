@@ -9,8 +9,7 @@
     <form class="example-form">
         <mat-form-field class="w-100">
             <mat-label>Email</mat-label>
-            <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                placeholder="Ex. abc@example.com" [(ngModel)]="email">
+            <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. abc@example.com" [(ngModel)]="email">
             <mat-hint>Please enter a valid email</mat-hint>
             <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                 Please enter a valid email address
@@ -48,7 +47,7 @@
 
         <mat-form-field class="w-100">
             <mat-label>Address</mat-label>
-            <input matInput [formControl]="addressFormControl" [errorStateMatcher]="matcher" [(ngModel)]="mobno">
+            <input matInput [formControl]="addressFormControl" [errorStateMatcher]="matcher" [(ngModel)]="address">
             <mat-hint>Please enter your delivery address</mat-hint>
             <mat-error *ngIf="!addressFormControl.hasError('required')">
                 Please enter your address!
@@ -62,7 +61,7 @@
         <mat-form-field appearance="standard" class="w-100">
             <mat-label>Product</mat-label>
             <mat-select [formControl]="productFormControl" [errorStateMatcher]="matcher" [(ngModel)]="amount">
-                <mat-option value="1200" >Cow milk 1 litre/ 1 month trial</mat-option>
+                <mat-option value="1200">Cow milk 1 litre/ 1 month trial</mat-option>
                 <mat-option value="3600">Cow milk 1 litre/ 3 month subscription</mat-option>
                 <mat-option value="7200">Cow milk 1 litre/ 6 month subscription</mat-option>
                 <mat-option value="1500">Buffalo milk 1 litre/ 1 month trial</mat-option>
@@ -91,10 +90,10 @@
         <button class="btn btn-primary w-100 " mat-button (click)="onOrder()">order</button>
         <br>
         <br>
-        
+
 
     </form>
-  
+
 </div>
 
 <br>

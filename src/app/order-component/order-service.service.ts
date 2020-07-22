@@ -27,7 +27,12 @@ export class OrderServiceService {
 
   postData(data){
     console.log("postData  "+data)
-    return this._http.post("http://aincworks.tech:8843/pay",data,this.httpOptions).pipe(map(result => result));
+    return this._http.post("http://localhost:8843/pay",data,this.httpOptions).pipe(map(result => result));
+  }
+
+  sentResponse(data:any){
+    console.log("ResponseData  "+data)
+    return this._http.post("http://localhost:8843/response",data,this.httpOptions).pipe(map(result => result));
   }
 
 
